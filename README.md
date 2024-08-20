@@ -1,4 +1,4 @@
-##
+```
 #!/bin/bash
 
 # Update and upgrade all packages, bypassing the manual prompt
@@ -36,3 +36,4 @@ pip install -r requirements.txt
 
 # Notify user that the script has completed successfully
 echo "Bot installation completed!"
+```
