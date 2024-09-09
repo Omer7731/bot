@@ -42,6 +42,7 @@ echo "Bot installation completed!"
 
 
 ```
+termux-wake-lock
 adb connect localhost:5555
 python -m uiautomator2 init
 python yomedia.py
