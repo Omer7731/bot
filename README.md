@@ -13,6 +13,9 @@ bash setup-pointless-repo.sh
 # Install required packages
 pkg install android-tools python build-essential cmake libjpeg-turbo libpng libxml2 libxslt freetype git -y
 
+# Install the python pip
+pkg install python-pip
+
 # Install the wheel package via pip
 pip install wheel
 
