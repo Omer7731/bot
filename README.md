@@ -52,3 +52,10 @@ adb connect localhost:5555
 python -m uiautomator2 init
 python yomedia.py
 ```
+
+
+```
+pkg update && pkg upgrade
+pkg install build-essential clang make openssl openssl-dev libffi libffi-dev zlib zlib-dev wget
+wget https://www.python.org/ftp/python/3.11.10/Python-3.11.10.tgz
+```
