@@ -45,8 +45,6 @@ echo "Bot installation completed!"
 
 
 ```
-pip install --upgrade uiautomator2
-pip install --upgrade pip setuptools wheel
 termux-wake-lock
 adb connect localhost:5555
 python -m uiautomator2 init
@@ -72,5 +70,29 @@ cd Python-3.11.0
 make
 
 make install
+
+```
+
+
+
+```
+#!/bin/bash
+
+pkg uninstall -y python
+
+pkg install -y wget git make clang openssl libffi zlib libbz2 libsqlite readline
+
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init --path)"' >> ~/.bashrc
+
+source ~/.bashrc
+
+pyenv install 3.11.0
+
+pyenv global 3.11.0
+
 
 ```
