@@ -45,6 +45,8 @@ echo "Bot installation completed!"
 
 
 ```
+pip install --upgrade uiautomator2
+pip install --upgrade pip setuptools wheel
 termux-wake-lock
 adb connect localhost:5555
 python -m uiautomator2 init
