@@ -90,9 +90,9 @@ echo 'eval "$(pyenv init --path)"' >> ~/.bashrc
 
 source ~/.bashrc
 
-pyenv install 3.11.0
+pyenv install 3.11.10
 
-pyenv global 3.11.0
+pyenv global 3.11.10
 
 
 ```
