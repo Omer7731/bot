@@ -57,30 +57,20 @@ python yomedia.py
 ```
 #!/bin/bash
 
-# Step 1: Uninstall the current Python version (if installed)
 pkg uninstall -y python
 
-# Step 2: Install dependencies required for building Python
 pkg install -y wget clang make openssl libffi zlib libbz2 libsqlite readline
 
-# Step 3: Download Python 3.11.0 source code
 wget https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tgz
 
-# Step 4: Extract the tar file
 tar -xf Python-3.11.0.tgz
 
-# Step 5: Change directory to Python-3.11.0
 cd Python-3.11.0
 
-# Step 6: Configure the build
-./configure --prefix=$PREFIX --enable-shared --with-openssl=$PREFIX
+./configure --prefix=$PREFIX --enable-shared --with-openssl=$PREFIX CFLAGS="-Wno-implicit-function-declaration"
 
-# Step 7: Compile Python (this may take some time)
 make
 
-# Step 8: Install Python
 make install
-
-
 
 ```
