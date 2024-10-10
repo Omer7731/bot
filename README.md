@@ -55,62 +55,11 @@ python yomedia.py
 
 
 ```
-#!/bin/bash
-
-# Update and upgrade all packages, excluding Python, and force config file replacement
-pkg update
-pkg upgrade -y --ignore python -o Dpkg::Options::="--force-confnew"
-
-# Download the setup script for the pointless repository
-curl -LO https://its-pointless.github.io/setup-pointless-repo.sh
-
-# Run the setup script
-bash setup-pointless-repo.sh
-
-# Install required packages except Python (which will be installed manually)
-pkg install android-tools build-essential cmake libjpeg-turbo libpng libxml2 libxslt freetype git openssl-dev libffi-dev bzip2 zlib-dev -y
-
-# Download Python 3.11.10 source code
-curl -O https://www.python.org/ftp/python/3.11.10/Python-3.11.10.tgz
-
-# Extract the downloaded source code
-tar -xf Python-3.11.10.tgz
-cd Python-3.11.10
-
-# Configure and build Python 3.11.10
-./configure --prefix=$PREFIX --enable-shared --enable-optimizations
+“wget https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tgz
+tar -xf Python-3.11.0.tgz
+cd Python-3.11.0
+./configure --prefix=$PREFIX --enable-optimizations
 make
-make install
-
-# Verify Python 3.11.10 installation
-python3.11 --version
-
-# Install pip for Python 3.11
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-python3.11 get-pip.py
-
-# Install the wheel package via pip
-pip3.11 install wheel
-
-# Clone the bot repository
-git clone https://github.com/omer7731/bot.git gramaddict
-
-# Change to the bot directory
-cd gramaddict
-
-# Upgrade setuptools using Python 3.11
-pip3.11 install --upgrade setuptools
-
-# Install lxml for Python
-pkg install python-lxml
-
-# Install psutil via pip for Python 3.11
-pip3.11 install psutil
-
-# Install other required Python packages from the requirements file
-pip3.11 install -r requirements.txt
-
-# Notify user that the script has completed successfully
-echo "Bot installation completed!"
+make install"
 
 ```
