@@ -59,7 +59,7 @@ pkg uninstall -y python
 
 pkg install -y wget clang make openssl libffi zlib libbz2 libsqlite readline
 
-wget https://www.python.org/ftp/python/3.10.0/Python-3.11.0.tgz
+wget https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tgz
 
 tar -xf Python-3.11.0.tgz
 
