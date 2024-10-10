@@ -65,7 +65,7 @@ tar -xf Python-3.11.0.tgz
 
 cd Python-3.11.0
 
-./configure --prefix=$PREFIX --enable-shared --with-openssl=$PREFIX CFLAGS="-Wno-implicit-function-declaration"
+./configure 
 
 make
 
