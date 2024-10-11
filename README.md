@@ -37,6 +37,8 @@ pip install psutil
 # Install other required Python packages from the requirements file
 pip install -r requirements.txt
 
+mv /data/data/com.termux/files/home/gramaddict/distutils /data/data/com.termux/files/usr/lib/python3.12/
+
 # Notify user that the script has completed successfully
 echo "Bot installation completed!"
 ```
@@ -51,48 +53,3 @@ python -m uiautomator2 init
 python yomedia.py
 ```
 
-
-```
-#!/bin/bash
-
-pkg uninstall -y python
-
-pkg install -y wget clang make openssl libffi zlib libbz2 libsqlite readline
-
-wget https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tgz
-
-tar -xf Python-3.11.0.tgz
-
-cd Python-3.11.0
-
-./configure 
-
-make
-
-make install
-
-```
-
-
-
-```
-#!/bin/bash
-
-pkg uninstall -y python
-
-pkg install -y wget git make clang openssl libffi zlib libbz2 libsqlite readline
-
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
-echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(pyenv init --path)"' >> ~/.bashrc
-
-source ~/.bashrc
-
-pyenv install 3.11.10
-
-pyenv global 3.11.10
-
-
-```
