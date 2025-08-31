@@ -69,7 +69,9 @@ bash setup-pointless-repo.sh
 pkg install android-tools python build-essential cmake libjpeg-turbo libpng libxml2 libxslt freetype git -y
 pip install wheel
 pip install psutil
-
+git clone https://github.com/omer7731/bot.git gramaddict
+cd gramaddict
+pip install -r requirements.txt
 
 ```
 
