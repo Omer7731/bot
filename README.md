@@ -53,3 +53,34 @@ python -m uiautomator2 init
 python yomedia.py
 ```
 
+
+
+
+
+
+
+
+
+
+```
+pkg upgrade -y
+curl -LO https://its-pointless.github.io/setup-pointless-repo.sh
+bash setup-pointless-repo.sh
+pkg install android-tools python build-essential cmake libjpeg-turbo libpng libxml2 libxslt freetype git -y
+pip install wheel
+
+```
+
+
+```
+git clone https://github.com/omer7731/bot.git gramaddict
+cd gramaddict
+pip install -r requirements.txt
+
+```
+
+
+```
+python -m uiautomator2 init
+python run.py
+```
